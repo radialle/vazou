@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" /> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" href="favicon.svg" />
+        <link rel="mask-icon" href="mask-icon.svg" color="#00b894" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vazou? | Radialle</title>
+    </head>
+    <body>
+        <div class="container">
+            <main>
+                <div class="query-screen screen">
+                    <img class="logo" src="img/logo.svg" aria-hidden="true" alt="" />
+                    <h1>
+                        Vazou?
+                    </h1>
+                    <div class="text-input">
+                        <div class="input-container">
+                            <div class="icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <input size="1" class="cpf-input" type="text" placeholder="CPF" />
+                            <div class="submit disabled">
+                                <span>Consultar</span>
+                            </div>
+                        </div>
+                        <div class="validation-container hidden">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>CPF inválido</span>
+                        </div>
+                    </div>
+                    <p class="desc">
+                        Em janeiro de 2021, mais de <strong>223 milhões de brasileiros</strong>
+                        tiveram suas informações pessoais divulgadas em <a href="https://tecnoblog.net/404838/exclusivo-vazamento-que-expos-220-milhoes-de-brasileiros-e-pior-do-que-se-pensava/" target="_blank">
+                        vazamentos de origem indeterminada.</a> Saiba se você está entre eles.
+                    </p>
+                </div>
+                <div class="result-screen-error screen hidden">
+                    <i class="result-icon fas fa-exclamation-circle"></i>
+                    <h1 class="no-margin">
+                        Oops!
+                    </h1>
+                    <p class="desc">
+                        Infelizmente não foi possível realizar a consulta neste momento. Por
+                        favor, tente novamente mais tarde.
+                    </p>
+                    <p class="no-margin back-button">Voltar</p>
+                </div>
+                <div class="result-screen-safe screen hidden">
+                    <i class="result-icon fas fa-check-circle"></i>
+                    <h1 class="no-margin">
+                        Boas notícias!
+                    </h1>
+                    <p class="desc">
+                        Não encontramos nos vazamentos informações associadas ao CPF informado.
+                    </p>
+                    <p class="no-margin back-button">Voltar</p>
+                </div>
+                <div class="result-screen-exposed screen hidden">
+                    <i class="result-icon fas fa-info-circle"></i>
+                    <h1 class="no-margin">
+                        Seus dados estão expostos
+                    </h1>
+                    <p class="desc">
+                        Encontramos o CPF informado nos vazamentos.
+                    </p>
+                    <div class="leak-info leak-info-basic hidden">
+                        <h4>Divulgado em 14 de janeiro de 2021</h4>
+                        <p>
+                            Foram publicados as seguintes informações.
+                        </p>
+                        <ul>
+                            <li>Nome completo</li>
+                            <li>Gênero</li>
+                            <li>Data de nascimento</li>
+                        </ul>
+                    </div>
+                    <div class="leak-info leak-info-complete hidden">
+                        <h4>Divulgado em 11 de janeiro de 2021</h4>
+                        <p>
+                            De acordo com o conteúdo que obtivemos, os dados a seguir foram
+                            postos à venda.
+                        </p>
+                        <ul>
+                            <li class="leak-column-1 hidden">Nome</li>
+                            <li class="leak-column-1 hidden">Gênero</li>
+                            <li class="leak-column-1 hidden">Data de nascimento</li>
+                            <li class="leak-column-1 hidden">Nome dos pais</li>
+                            <li class="leak-column-2 hidden">Endereços de email</li>
+                            <li class="leak-column-3 hidden">Números de telefone</li>
+                            <li class="leak-column-4 hidden">Endereço residencial</li>
+                            <li class="leak-column-5 hidden">Classificação Mosaic (sistema da Serasa Experian)</li>
+                            <li class="leak-column-6 hidden">Ocupação</li>
+                            <li class="leak-column-7 hidden">Score de crédito</li>
+                            <li class="leak-column-8 hidden">RG (identidade)</li>
+                            <li class="leak-column-9 hidden">Título de eleitor</li>
+                            <li class="leak-column-10 hidden">Nível de escolaridade</li>
+                            <li class="leak-column-11 hidden">Participação em empresas</li>
+                            <li class="leak-column-12 hidden">Situação cadastral do CPF na Receita Federal</li>
+                            <li class="leak-column-13 hidden">Classe social</li>
+                            <li class="leak-column-14 hidden">Estado civil</li>
+                            <li class="leak-column-15 hidden">Dados do empregador</li>
+                            <li class="leak-column-16 hidden">Informações sobre modelo de afinidade</li>
+                            <li class="leak-column-17 hidden">Dados de modelo analítico (perfil de consumo)</li>
+                            <li class="leak-column-18 hidden">Poder aquisitivo</li>
+                            <li class="leak-column-19 hidden">Foto de rosto</li>
+                            <li class="leak-column-20 hidden">Cargos públicos exercidos</li>
+                            <li class="leak-column-21 hidden">Cheques sem fundos</li>
+                            <li class="leak-column-22 hidden">Débitos</li>
+                            <li class="leak-column-23 hidden">Situação do Bolsa Família</li>
+                            <li class="leak-column-24 hidden">Informações sobre universidade: instituição, curso, ano de entrada e ano de conclusão</li>
+                            <li class="leak-column-25 hidden">Inscrição em conselhos profissionais (e.g. CFM, CREA, etc.)</li>
+                            <li class="leak-column-26 hidden">Dados sobre domicílio: quantidade de pessoas, faixa de renda e endereço</li>
+                            <li class="leak-column-27 hidden">Informações sobre familiares</li>
+                            <li class="leak-column-28 hidden">Perfil no LinkedIn</li>
+                            <li class="leak-column-29 hidden">Salário</li>
+                            <li class="leak-column-30 hidden">Renda</li>
+                            <li class="leak-column-31 hidden">Óbito: data de falecimento, idade, número do livro de registro, número da folha do livro de registro, número do termo do óbito, data de lavratura da certidão de óbito e dados do cartório</li>
+                            <li class="leak-column-32 hidden">Imposto de renda: banco, código da agência, lote de restituição, ano de referência e situação da declaração</li>
+                            <li class="leak-column-33 hidden">Dados do INSS (Instituto Nacional do Seguro Social): idade atual, bem como número, espécie e data de início de benefícios</li>
+                            <li class="leak-column-34 hidden">FGTS (Fundo de Garantia do Tempo de Serviço): número do PIS</li>
+                            <li class="leak-column-35 hidden">Número do CNS (Cartão Nacional de Saúde)</li>
+                            <li class="leak-column-36 hidden">NIS (Número de Identificação Social)</li>
+                            <li class="leak-column-37 hidden">Número do PIS (Programa de Integração Social)</li>
+                        </ul>
+                    </div>
+                    <p class="no-margin back-button">Voltar</p>
+                </div>
+            </main>
+            <footer>
+                <p>
+                    Esta é uma iniciativa desenvolvida por <a href="https://rlaneth.com/" target="_blank">Rodrigo Laneth</a> e mantida pela <a href="https://radialle.com/" target="_blank">Radialle</a>.
+                </p>
+            </footer>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/cleave.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/e53234c8d8.js" crossorigin="anonymous"></script>
+</html>

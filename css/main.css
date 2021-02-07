@@ -1,0 +1,265 @@
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 0.8em;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(27, 156, 252);
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    width: 140px;
+}
+.submit.disabled,
+.submit.disabled:hover,
+.submit.disabled:active {
+    background: rgb(178, 190, 195);
+    cursor: not-allowed;
+}
+.submit:hover {
+    background: rgb(37, 204, 247);
+}
+.submit:active {
+    box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+.submit:active span {
+    transform: translateY(2px);
+}
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+p {
+    max-width: 700px;
+    font-weight: 300;
+    text-align: center;
+}
+footer p  {
+    font-size: 0.9em;
+    line-height: 1.4em;
+    margin-top: 1.4em;
+    color:rgb(150, 152, 154);
+}
+footer p a { color: rgb(140, 142, 144); font-weight: 400; text-decoration: underline; }
+footer p a:hover { color: rgb(80, 82, 84); }
+h1 {
+    font-size: 1.8em;
+    font-weight: 500;
+    text-align: center;
+}
+.logo {
+    width: 80px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.result-icon {
+    display: block;
+    font-size: 4em;
+    margin-bottom: 0.4em;
+}
+.result-screen-error .result-icon { color:rgb(253, 203, 110); }
+.result-screen-exposed .result-icon { color:rgb(214, 48, 49); }
+.result-screen-safe .result-icon { color:rgb(0, 184, 148); }
+p.desc {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+strong { font-weight: 500; }
+p.error-message {
+    color: rgb(255, 255, 255);
+    background: rgb(249, 127, 81);
+    padding: 1em;
+}
+p.error-message span {
+    margin-left: 0.4em;
+}
+a, .back-button {
+    color: rgb(27, 156, 252);
+    transition: color 0.3s ease-in-out;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover, .back-button:hover { color: rgb(37, 204, 247); }
+main .text-input {
+    margin-top: 1.6em;
+    width: 100%;
+}
+main .text-input .input-container {
+    display: flex;
+    background:rgb(244,245,246);
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+}
+main .text-input .icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+    color:rgba(0, 0, 0, 0.2);
+    width: 60px;
+    padding-left: 20px;
+}
+main .text-input .input-container:focus-within {
+    background: rgb(234,236,238);;
+}
+main .text-input input {
+    font-family: Inter, sans-serif;
+    font-size: 1.8em;
+    font-weight: 300;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    padding: 0.4em;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: center;
+}
+main .text-input input::placeholder,
+main .text-input input::-moz-placeholder,
+main .text-input input::-webkit-placeholder {
+    color:rgba(0, 0, 0, 0.2);
+}
+main .text-input .validation-container {
+    color: rgb(255, 255, 255);
+    background: rgb(255, 118, 117);
+    text-align: center;
+    padding: 0.4em;
+}
+.hidden { display: none !important; }
+.validation-container.hidden {
+    display: block !important;
+    opacity: 0;
+}
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.no-margin { margin: 0 !important; }
+
+.leak-info {
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+    border-left: solid 4px rgb(255, 118, 117);
+    padding: 0.6em;
+    margin-bottom: 1.4em;
+}
+.leak-info p {
+    text-align: left;
+    margin: 0.8em 0;
+}
+
+h3, h4 {
+    font-weight: 500;
+    margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+    body { font-size: 0.8em; }
+}
+@media screen and (min-width: 400px) {
+    main .text-input .icon { width: 120px; }
+}
+
+ul {
+    font-weight: 300;
+    padding: 0 1.4em;
+    margin: 0;
+}
+ul li:not(:last-child) {
+    margin-bottom:0.2em;
+}
+
+p.note {
+    text-align:left;
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
+.fade-in { animation: anim-fade-in 0.4s ease-in-out; }
+.fade-out { animation: anim-fade-out 0.4s ease-in-out; }
+.move-in-left { animation: anim-move-in-left 0.4s ease-in-out; }
+.move-out-left { animation: anim-move-out-left 0.4s ease-in-out; }
+.move-in-right { animation: anim-move-in-right 0.4s ease-in-out; }
+.move-out-right { animation: anim-move-out-right 0.4s ease-in-out; }
+
+@keyframes anim-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes anim-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes anim-move-in-left {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim-move-in-right {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim-move-out-left {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+}
+
+@keyframes anim-move-out-right {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+}
